@@ -17,11 +17,13 @@ int main()
         {
             cout << "Congratulations! You guessed the right number!" << endl;
             gameRunning = false;
+            break;
         }
         if (tries >= maxTries)
         {
-            cout << "Sorry, you have run out of tries!" << endl;
+            cout << "Sorry, you have run out of tries! The number was " << targetNumber << endl;
             gameRunning = false;
+            break;
         }
         const int triesRemaining = (maxTries - tries);
         const string triesRemainingString = "You have " + to_string(triesRemaining) + " tries remaining";
